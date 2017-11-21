@@ -1,0 +1,24 @@
+{
+    "ticketingSystemApp": {
+        "seat" : {
+            "home": {
+                "title": "Seats",
+                "createLabel": "创建新 Seat",
+                "createOrEditLabel": "创建或编辑 Seat",
+                "search": "查找 Seat"
+            },
+            "created": "Seat {{ param }} 创建成功",
+            "updated": "Seat {{ param }} 更新成功",
+            "deleted": "Seat {{ param }} 删除成功",
+            "delete": {
+                "question": "你确定要删除 Seat {{ id }} 吗？"
+            },
+            "detail": {
+                "title": "Seat"
+            },
+            "seat_id": "Seat Id",
+            "remark": "Remark",
+            "vehicle": "Vehicle"
+        }
+    }
+}

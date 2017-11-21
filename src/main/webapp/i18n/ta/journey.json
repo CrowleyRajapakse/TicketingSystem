@@ -1,0 +1,28 @@
+{
+    "ticketingSystemApp": {
+        "journey" : {
+            "home": {
+                "title": "Journeys",
+                "createLabel": "Journey-ஐ உருவாக்கு",
+                "createOrEditLabel": "Journey -ஐ மாற்று (அ) உருவாக்கு",
+                "search": "Search for Journey"
+            },
+            "created": "Journey புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Journey மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Journey நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Journey {{ id }}?"
+            },
+            "detail": {
+                "title": "Journey"
+            },
+            "journey_id": "Journey Id",
+            "departure": "Departure",
+            "departure_time": "Departure Time",
+            "arrival": "Arrival",
+            "arrival_time": "Arrival Time",
+            "amount": "Amount",
+            "vehicle": "Vehicle"
+        }
+    }
+}

@@ -1,0 +1,97 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myHaltLabel" data-translate="ticketingSystemApp.halt.home.createOrEditLabel">Create or edit a Halt</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.halt.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.halt.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="ticketingSystemApp.halt.start_halt" for="field_start_halt">Start Halt</label>
+            <input type="text" class="form-control" name="start_halt" id="field_start_halt"
+                    ng-model="vm.halt.start_halt"
+                    required/>
+            <div ng-show="editForm.start_halt.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.start_halt.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="ticketingSystemApp.halt.end_halt" for="field_end_halt">End Halt</label>
+            <input type="text" class="form-control" name="end_halt" id="field_end_halt"
+                    ng-model="vm.halt.end_halt"
+                    required/>
+            <div ng-show="editForm.end_halt.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.end_halt.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="ticketingSystemApp.halt.halt_distance" for="field_halt_distance">Halt Distance</label>
+            <input type="number" class="form-control" name="halt_distance" id="field_halt_distance"
+                    ng-model="vm.halt.halt_distance"
+                    required/>
+            <div ng-show="editForm.halt_distance.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.halt_distance.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.halt_distance.$error.number" data-translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="ticketingSystemApp.halt.price" for="field_price">Price</label>
+            <input type="number" class="form-control" name="price" id="field_price"
+                    ng-model="vm.halt.price"
+                    required min="0"/>
+            <div ng-show="editForm.price.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.price.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.price.$error.min" data-translate="entity.validation.min" translate-value-min="0">
+                    This field should be at least 0.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.price.$error.number" data-translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label data-translate="ticketingSystemApp.halt.route" for="field_route">Route</label>
+            <select class="form-control" id="field_route" name="route" ng-model="vm.halt.routeId" ng-options="route.id as route.route_name for route in vm.routes"             required>
+            </select>
+        </div>
+        <div ng-show="editForm.route.$invalid">
+            <p class="help-block"
+                ng-show="editForm.route.$error.required" data-translate="entity.validation.required">
+                This field is required.
+            </p>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

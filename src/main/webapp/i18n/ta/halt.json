@@ -1,0 +1,26 @@
+{
+    "ticketingSystemApp": {
+        "halt" : {
+            "home": {
+                "title": "Halts",
+                "createLabel": "Halt-ஐ உருவாக்கு",
+                "createOrEditLabel": "Halt -ஐ மாற்று (அ) உருவாக்கு",
+                "search": "Search for Halt"
+            },
+            "created": "Halt புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Halt மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Halt நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Halt {{ id }}?"
+            },
+            "detail": {
+                "title": "Halt"
+            },
+            "start_halt": "Start Halt",
+            "end_halt": "End Halt",
+            "halt_distance": "Halt Distance",
+            "price": "Price",
+            "route": "Route"
+        }
+    }
+}

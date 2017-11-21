@@ -1,0 +1,24 @@
+{
+    "ticketingSystemApp": {
+        "seat" : {
+            "home": {
+                "title": "Seats",
+                "createLabel": "नया Seat बनाएँ",
+                "createOrEditLabel": "Seat बनाएँ या संपादित करें",
+                "search": "Seat खोजें"
+            },
+            "created": "एक नया Seat [identifier: {{ param }}] तैयार है",
+            "updated": "एक Seat [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Seat [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Seat [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Seat"
+            },
+            "seat_id": "Seat Id",
+            "remark": "Remark",
+            "vehicle": "Vehicle"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "ticketingSystemApp": {
+        "seat" : {
+            "home": {
+                "title": "Seats",
+                "createLabel": "Seat-ஐ உருவாக்கு",
+                "createOrEditLabel": "Seat -ஐ மாற்று (அ) உருவாக்கு",
+                "search": "Search for Seat"
+            },
+            "created": "Seat புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Seat மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Seat நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Seat {{ id }}?"
+            },
+            "detail": {
+                "title": "Seat"
+            },
+            "seat_id": "Seat Id",
+            "remark": "Remark",
+            "vehicle": "Vehicle"
+        }
+    }
+}

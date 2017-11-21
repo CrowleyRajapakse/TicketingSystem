@@ -1,0 +1,26 @@
+{
+    "ticketingSystemApp": {
+        "halt" : {
+            "home": {
+                "title": "Halts",
+                "createLabel": "创建新 Halt",
+                "createOrEditLabel": "创建或编辑 Halt",
+                "search": "查找 Halt"
+            },
+            "created": "Halt {{ param }} 创建成功",
+            "updated": "Halt {{ param }} 更新成功",
+            "deleted": "Halt {{ param }} 删除成功",
+            "delete": {
+                "question": "你确定要删除 Halt {{ id }} 吗？"
+            },
+            "detail": {
+                "title": "Halt"
+            },
+            "start_halt": "Start Halt",
+            "end_halt": "End Halt",
+            "halt_distance": "Halt Distance",
+            "price": "Price",
+            "route": "Route"
+        }
+    }
+}

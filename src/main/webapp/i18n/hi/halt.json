@@ -1,0 +1,26 @@
+{
+    "ticketingSystemApp": {
+        "halt" : {
+            "home": {
+                "title": "Halts",
+                "createLabel": "नया Halt बनाएँ",
+                "createOrEditLabel": "Halt बनाएँ या संपादित करें",
+                "search": "Halt खोजें"
+            },
+            "created": "एक नया Halt [identifier: {{ param }}] तैयार है",
+            "updated": "एक Halt [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Halt [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Halt [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Halt"
+            },
+            "start_halt": "Start Halt",
+            "end_halt": "End Halt",
+            "halt_distance": "Halt Distance",
+            "price": "Price",
+            "route": "Route"
+        }
+    }
+}

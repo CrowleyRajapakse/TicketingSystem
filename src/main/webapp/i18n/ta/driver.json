@@ -1,0 +1,28 @@
+{
+    "ticketingSystemApp": {
+        "driver" : {
+            "home": {
+                "title": "Drivers",
+                "createLabel": "Driver-ஐ உருவாக்கு",
+                "createOrEditLabel": "Driver -ஐ மாற்று (அ) உருவாக்கு",
+                "search": "Search for Driver"
+            },
+            "created": "Driver புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Driver மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Driver நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Driver {{ id }}?"
+            },
+            "detail": {
+                "title": "Driver"
+            },
+            "driver_name": "Driver Name",
+            "license": "License",
+            "date_of_birth": "Date Of Birth",
+            "driver_email": "Driver Email",
+            "driver_phone_no": "Driver Phone No",
+            "status": "Status",
+            "vehicle": "Vehicle"
+        }
+    }
+}

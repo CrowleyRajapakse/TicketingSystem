@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span data-translate="ticketingSystemApp.halt.detail.title">Halt</span> {{vm.halt.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="ticketingSystemApp.halt.start_halt">Start Halt</span></dt>
+        <dd>
+            <span>{{vm.halt.start_halt}}</span>
+        </dd>
+        <dt><span data-translate="ticketingSystemApp.halt.end_halt">End Halt</span></dt>
+        <dd>
+            <span>{{vm.halt.end_halt}}</span>
+        </dd>
+        <dt><span data-translate="ticketingSystemApp.halt.halt_distance">Halt Distance</span></dt>
+        <dd>
+            <span>{{vm.halt.halt_distance}}</span>
+        </dd>
+        <dt><span data-translate="ticketingSystemApp.halt.price">Price</span></dt>
+        <dd>
+            <span>{{vm.halt.price}}</span>
+        </dd>
+        <dt><span data-translate="ticketingSystemApp.halt.route">Route</span></dt>
+        <dd>
+            <a ui-sref="route-detail({id:vm.halt.routeId})">{{vm.halt.routeRoute_name}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="halt-detail.edit({id:vm.halt.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

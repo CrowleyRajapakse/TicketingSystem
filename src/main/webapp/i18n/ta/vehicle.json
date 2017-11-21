@@ -1,0 +1,27 @@
+{
+    "ticketingSystemApp": {
+        "vehicle" : {
+            "home": {
+                "title": "Vehicles",
+                "createLabel": "Vehicle-ஐ உருவாக்கு",
+                "createOrEditLabel": "Vehicle -ஐ மாற்று (அ) உருவாக்கு",
+                "search": "Search for Vehicle"
+            },
+            "created": "Vehicle புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Vehicle மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Vehicle நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Vehicle {{ id }}?"
+            },
+            "detail": {
+                "title": "Vehicle"
+            },
+            "vehicle_name": "Vehicle Name",
+            "type": "Type",
+            "capacity": "Capacity",
+            "driver": "Driver",
+            "route": "Route",
+            "seat": "Seat"
+        }
+    }
+}

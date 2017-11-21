@@ -1,0 +1,47 @@
+
+<div>
+    <h2><span data-translate="ticketingSystemApp.journey.detail.title">Journey</span> {{vm.journey.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="ticketingSystemApp.journey.journey_id">Journey Id</span></dt>
+        <dd>
+            <span>{{vm.journey.journey_id}}</span>
+        </dd>
+        <dt><span data-translate="ticketingSystemApp.journey.departure">Departure</span></dt>
+        <dd>
+            <span>{{vm.journey.departure}}</span>
+        </dd>
+        <dt><span data-translate="ticketingSystemApp.journey.departure_time">Departure Time</span></dt>
+        <dd>
+            <span>{{vm.journey.departure_time | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="ticketingSystemApp.journey.arrival">Arrival</span></dt>
+        <dd>
+            <span>{{vm.journey.arrival}}</span>
+        </dd>
+        <dt><span data-translate="ticketingSystemApp.journey.arrival_time">Arrival Time</span></dt>
+        <dd>
+            <span>{{vm.journey.arrival_time | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="ticketingSystemApp.journey.amount">Amount</span></dt>
+        <dd>
+            <span>{{vm.journey.amount}}</span>
+        </dd>
+        <dt><span data-translate="ticketingSystemApp.journey.vehicle">Vehicle</span></dt>
+        <dd>
+            <a ui-sref="vehicle-detail({id:vm.journey.vehicleId})">{{vm.journey.vehicleVehicle_name}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="journey-detail.edit({id:vm.journey.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

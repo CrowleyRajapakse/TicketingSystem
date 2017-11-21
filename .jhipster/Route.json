@@ -1,0 +1,47 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "vehicle",
+            "otherEntityName": "vehicle",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "vehicle_name"
+        },
+        {
+            "relationshipName": "halt",
+            "otherEntityName": "halt",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "route"
+        }
+		
+    ],
+    "fields": [
+        {
+            "fieldName": "route_name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "distance",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "remarks",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171121033458",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "route",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
+}

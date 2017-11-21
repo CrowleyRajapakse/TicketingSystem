@@ -1,0 +1,59 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "driver",
+            "otherEntityName": "driver",
+            "relationshipType": "one-to-one",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "vehicle"
+        },
+        {
+            "relationshipName": "route",
+            "otherEntityName": "route",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "vehicle"
+        },
+        {
+            "relationshipName": "seat",
+            "otherEntityName": "seat",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "vehicle"
+        },
+        {
+            "relationshipName": "journey",
+            "otherEntityName": "journey",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "vehicle"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "vehicle_name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "capacity",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20171121033101",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "vehicle",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
+}

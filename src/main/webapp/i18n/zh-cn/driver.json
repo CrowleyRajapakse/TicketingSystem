@@ -1,0 +1,28 @@
+{
+    "ticketingSystemApp": {
+        "driver" : {
+            "home": {
+                "title": "Drivers",
+                "createLabel": "创建新 Driver",
+                "createOrEditLabel": "创建或编辑 Driver",
+                "search": "查找 Driver"
+            },
+            "created": "Driver {{ param }} 创建成功",
+            "updated": "Driver {{ param }} 更新成功",
+            "deleted": "Driver {{ param }} 删除成功",
+            "delete": {
+                "question": "你确定要删除 Driver {{ id }} 吗？"
+            },
+            "detail": {
+                "title": "Driver"
+            },
+            "driver_name": "Driver Name",
+            "license": "License",
+            "date_of_birth": "Date Of Birth",
+            "driver_email": "Driver Email",
+            "driver_phone_no": "Driver Phone No",
+            "status": "Status",
+            "vehicle": "Vehicle"
+        }
+    }
+}

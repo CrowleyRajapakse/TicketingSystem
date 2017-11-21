@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span data-translate="ticketingSystemApp.vehicle.detail.title">Vehicle</span> {{vm.vehicle.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="ticketingSystemApp.vehicle.vehicle_name">Vehicle Name</span></dt>
+        <dd>
+            <span>{{vm.vehicle.vehicle_name}}</span>
+        </dd>
+        <dt><span data-translate="ticketingSystemApp.vehicle.type">Type</span></dt>
+        <dd>
+            <span>{{vm.vehicle.type}}</span>
+        </dd>
+        <dt><span data-translate="ticketingSystemApp.vehicle.capacity">Capacity</span></dt>
+        <dd>
+            <span>{{vm.vehicle.capacity}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="vehicle-detail.edit({id:vm.vehicle.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

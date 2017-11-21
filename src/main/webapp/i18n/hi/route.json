@@ -1,0 +1,25 @@
+{
+    "ticketingSystemApp": {
+        "route" : {
+            "home": {
+                "title": "Routes",
+                "createLabel": "नया Route बनाएँ",
+                "createOrEditLabel": "Route बनाएँ या संपादित करें",
+                "search": "Route खोजें"
+            },
+            "created": "एक नया Route [identifier: {{ param }}] तैयार है",
+            "updated": "एक Route [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Route [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Route [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Route"
+            },
+            "route_name": "Route Name",
+            "distance": "Distance",
+            "remarks": "Remarks",
+            "vehicle": "Vehicle"
+        }
+    }
+}

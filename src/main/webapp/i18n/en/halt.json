@@ -1,0 +1,26 @@
+{
+    "ticketingSystemApp": {
+        "halt" : {
+            "home": {
+                "title": "Halts",
+                "createLabel": "Create a new Halt",
+                "createOrEditLabel": "Create or edit a Halt",
+                "search": "Search for Halt"
+            },
+            "created": "A new Halt is created with identifier {{ param }}",
+            "updated": "A Halt is updated with identifier {{ param }}",
+            "deleted": "A Halt is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Halt {{ id }}?"
+            },
+            "detail": {
+                "title": "Halt"
+            },
+            "start_halt": "Start Halt",
+            "end_halt": "End Halt",
+            "halt_distance": "Halt Distance",
+            "price": "Price",
+            "route": "Route"
+        }
+    }
+}

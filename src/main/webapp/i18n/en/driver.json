@@ -1,0 +1,28 @@
+{
+    "ticketingSystemApp": {
+        "driver" : {
+            "home": {
+                "title": "Drivers",
+                "createLabel": "Create a new Driver",
+                "createOrEditLabel": "Create or edit a Driver",
+                "search": "Search for Driver"
+            },
+            "created": "A new Driver is created with identifier {{ param }}",
+            "updated": "A Driver is updated with identifier {{ param }}",
+            "deleted": "A Driver is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Driver {{ id }}?"
+            },
+            "detail": {
+                "title": "Driver"
+            },
+            "driver_name": "Driver Name",
+            "license": "License",
+            "date_of_birth": "Date Of Birth",
+            "driver_email": "Driver Email",
+            "driver_phone_no": "Driver Phone No",
+            "status": "Status",
+            "vehicle": "Vehicle"
+        }
+    }
+}

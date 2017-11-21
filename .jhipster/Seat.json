@@ -1,0 +1,33 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "vehicle",
+            "otherEntityName": "vehicle",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "vehicle_name"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "seat_id",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "remark",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171121034041",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "seat",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
+}

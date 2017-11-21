@@ -1,0 +1,125 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myJourneyLabel" data-translate="ticketingSystemApp.journey.home.createOrEditLabel">Create or edit a Journey</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.journey.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.journey.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="ticketingSystemApp.journey.journey_id" for="field_journey_id">Journey Id</label>
+            <input type="text" class="form-control" name="journey_id" id="field_journey_id"
+                    ng-model="vm.journey.journey_id"
+                    required/>
+            <div ng-show="editForm.journey_id.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.journey_id.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="ticketingSystemApp.journey.departure" for="field_departure">Departure</label>
+            <input type="text" class="form-control" name="departure" id="field_departure"
+                    ng-model="vm.journey.departure"
+                    required/>
+            <div ng-show="editForm.departure.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.departure.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="ticketingSystemApp.journey.departure_time" for="field_departure_time">Departure Time</label>
+                <div class="input-group">
+                    <input id="field_departure_time" type="text" class="form-control" name="departure_time" uib-datepicker-popup="{{dateformat}}" ng-model="vm.journey.departure_time" is-open="vm.datePickerOpenStatus.departure_time"
+                    required/>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('departure_time')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+            <div ng-show="editForm.departure_time.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.departure_time.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="ticketingSystemApp.journey.arrival" for="field_arrival">Arrival</label>
+            <input type="text" class="form-control" name="arrival" id="field_arrival"
+                    ng-model="vm.journey.arrival"
+                    required/>
+            <div ng-show="editForm.arrival.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.arrival.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="ticketingSystemApp.journey.arrival_time" for="field_arrival_time">Arrival Time</label>
+                <div class="input-group">
+                    <input id="field_arrival_time" type="text" class="form-control" name="arrival_time" uib-datepicker-popup="{{dateformat}}" ng-model="vm.journey.arrival_time" is-open="vm.datePickerOpenStatus.arrival_time"
+                    required/>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('arrival_time')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+            <div ng-show="editForm.arrival_time.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.arrival_time.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="ticketingSystemApp.journey.amount" for="field_amount">Amount</label>
+            <input type="number" class="form-control" name="amount" id="field_amount"
+                    ng-model="vm.journey.amount"
+                    required min="0"/>
+            <div ng-show="editForm.amount.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.amount.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.amount.$error.min" data-translate="entity.validation.min" translate-value-min="0">
+                    This field should be at least 0.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.amount.$error.number" data-translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label data-translate="ticketingSystemApp.journey.vehicle" for="field_vehicle">Vehicle</label>
+            <select class="form-control" id="field_vehicle" name="vehicle" ng-model="vm.journey.vehicleId" ng-options="vehicle.id as vehicle.vehicle_name for vehicle in vm.vehicles"             required>
+            </select>
+        </div>
+        <div ng-show="editForm.vehicle.$invalid">
+            <p class="help-block"
+                ng-show="editForm.vehicle.$error.required" data-translate="entity.validation.required">
+                This field is required.
+            </p>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

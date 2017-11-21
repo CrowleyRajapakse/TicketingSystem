@@ -1,0 +1,28 @@
+{
+    "ticketingSystemApp": {
+        "journey" : {
+            "home": {
+                "title": "Journeys",
+                "createLabel": "नया Journey बनाएँ",
+                "createOrEditLabel": "Journey बनाएँ या संपादित करें",
+                "search": "Journey खोजें"
+            },
+            "created": "एक नया Journey [identifier: {{ param }}] तैयार है",
+            "updated": "एक Journey [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Journey [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Journey [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Journey"
+            },
+            "journey_id": "Journey Id",
+            "departure": "Departure",
+            "departure_time": "Departure Time",
+            "arrival": "Arrival",
+            "arrival_time": "Arrival Time",
+            "amount": "Amount",
+            "vehicle": "Vehicle"
+        }
+    }
+}

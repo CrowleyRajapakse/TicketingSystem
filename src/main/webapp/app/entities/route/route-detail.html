@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span data-translate="ticketingSystemApp.route.detail.title">Route</span> {{vm.route.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="ticketingSystemApp.route.route_name">Route Name</span></dt>
+        <dd>
+            <span>{{vm.route.route_name}}</span>
+        </dd>
+        <dt><span data-translate="ticketingSystemApp.route.distance">Distance</span></dt>
+        <dd>
+            <span>{{vm.route.distance}}</span>
+        </dd>
+        <dt><span data-translate="ticketingSystemApp.route.remarks">Remarks</span></dt>
+        <dd>
+            <span>{{vm.route.remarks}}</span>
+        </dd>
+        <dt><span data-translate="ticketingSystemApp.route.vehicle">Vehicle</span></dt>
+        <dd>
+            <a ui-sref="vehicle-detail({id:vm.route.vehicleId})">{{vm.route.vehicleVehicle_name}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="route-detail.edit({id:vm.route.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

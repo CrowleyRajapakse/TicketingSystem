@@ -1,0 +1,100 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myDriverLabel" data-translate="ticketingSystemApp.driver.home.createOrEditLabel">Create or edit a Driver</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.driver.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.driver.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="ticketingSystemApp.driver.driver_name" for="field_driver_name">Driver Name</label>
+            <input type="text" class="form-control" name="driver_name" id="field_driver_name"
+                    ng-model="vm.driver.driver_name"
+                    required/>
+            <div ng-show="editForm.driver_name.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.driver_name.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="ticketingSystemApp.driver.license" for="field_license">License</label>
+            <input type="text" class="form-control" name="license" id="field_license"
+                    ng-model="vm.driver.license"
+                    required/>
+            <div ng-show="editForm.license.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.license.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="ticketingSystemApp.driver.date_of_birth" for="field_date_of_birth">Date Of Birth</label>
+                <div class="input-group">
+                    <input id="field_date_of_birth" type="text" class="form-control" name="date_of_birth" uib-datepicker-popup="{{dateformat}}" ng-model="vm.driver.date_of_birth" is-open="vm.datePickerOpenStatus.date_of_birth"
+                    required/>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('date_of_birth')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+            <div ng-show="editForm.date_of_birth.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.date_of_birth.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="ticketingSystemApp.driver.driver_email" for="field_driver_email">Driver Email</label>
+            <input type="text" class="form-control" name="driver_email" id="field_driver_email"
+                    ng-model="vm.driver.driver_email"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="ticketingSystemApp.driver.driver_phone_no" for="field_driver_phone_no">Driver Phone No</label>
+            <input type="number" class="form-control" name="driver_phone_no" id="field_driver_phone_no"
+                    ng-model="vm.driver.driver_phone_no"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="ticketingSystemApp.driver.status" for="field_status">Status</label>
+                <input type="checkbox" name="status" id="field_status"
+                          ng-model="vm.driver.status"/>
+            <div ng-show="editForm.status.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.status.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label data-translate="ticketingSystemApp.driver.vehicle" for="field_vehicle">Vehicle</label>
+            <select class="form-control" id="field_vehicle" name="vehicle" ng-model="vm.driver.vehicleId" ng-options="vehicle.id as vehicle.vehicle_name for vehicle in vm.vehicles | orderBy:'id'" required>
+            </select>
+        </div>
+        <div ng-show="editForm.vehicle.$invalid">
+            <p class="help-block"
+                ng-show="editForm.vehicle.$error.required" data-translate="entity.validation.required">
+                This field is required.
+            </p>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>
