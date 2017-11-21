@@ -40,6 +40,9 @@
                 new google.maps.LatLng(9.8731, 81.7718),
                 new google.maps.LatLng(6.1731, 79.7718)
             );
+            $scope.directionsDisplay = new google.maps.DirectionsRenderer();
+            $scope.directionsService = new google.maps.DirectionsService();
+            $scope.geocoder = new google.maps.Geocoder();
 
             $scope.map.bounds = {
                 northeast: {
@@ -88,6 +91,38 @@
                 }
             }
         };
+
+        // directions object -- with defaults
+        $scope.directions = {
+            origin: "Matara, Sri Lanka",
+            destination: "Colombo, Sri Lanka",
+            showList: false
+        };
+
+        // get directions using google maps api
+        $scope.getDirections = function () {
+            var request = {
+                origin: $scope.directions.origin,
+                destination: $scope.directions.destination,
+                travelMode: google.maps.DirectionsTravelMode.DRIVING,
+                transitOptions: {
+                    departureTime: new Date(1337675679473),
+                    modes: ['BUS'],
+                    routingPreference: 'FEWER_TRANSFERS'
+                }
+
+            };
+            $scope.directionsService.route(request, function (response, status) {
+                if (status === google.maps.DirectionsStatus.OK) {
+                    $scope.directionsDisplay.setDirections(response);
+                    $scope.directionsDisplay.setMap($scope.map.control.getGMap());
+                    $scope.directionsDisplay.setPanel(document.getElementById('directionsList'));
+                    $scope.directions.showList = true;
+                } else {
+                    alert('Google route unsuccesfull!');
+                }
+            });
+        }
 
         $scope.searchbox = {
             template: 'searchbox.tpl.html',
