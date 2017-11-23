@@ -1,0 +1,24 @@
+{
+    "ticketingSystemApp": {
+        "smartCard" : {
+            "home": {
+                "title": "SmartCards",
+                "createLabel": "नया Smart Card बनाएँ",
+                "createOrEditLabel": "Smart Card बनाएँ या संपादित करें",
+                "search": "Smart Card खोजें"
+            },
+            "created": "एक नया Smart Card [identifier: {{ param }}] तैयार है",
+            "updated": "एक Smart Card [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Smart Card [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Smart Card [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Smart Card"
+            },
+            "smartCardID": "Smart Card ID",
+            "expiryDate": "Expiry Date",
+            "status": "Status"
+        }
+    }
+}

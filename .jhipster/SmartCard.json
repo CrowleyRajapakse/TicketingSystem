@@ -1,0 +1,35 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        
+    ],
+    "fields": [
+        {
+            "fieldName": "smartCardID",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "expiryDate",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20171123121637",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "smart_card",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
+}

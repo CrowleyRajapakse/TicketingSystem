@@ -1,0 +1,25 @@
+{
+    "ticketingSystemApp": {
+        "userExtra" : {
+            "home": {
+                "title": "UserExtras",
+                "createLabel": "नया User Extra बनाएँ",
+                "createOrEditLabel": "User Extra बनाएँ या संपादित करें",
+                "search": "User Extra खोजें"
+            },
+            "created": "एक नया User Extra [identifier: {{ param }}] तैयार है",
+            "updated": "एक User Extra [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "User Extra [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "User Extra [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "User Extra"
+            },
+            "name": "Name",
+            "contactNo": "Contact No",
+            "address": "Address",
+            "user": "User"
+        }
+    }
+}

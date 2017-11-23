@@ -1,0 +1,24 @@
+{
+    "ticketingSystemApp": {
+        "reservation" : {
+            "home": {
+                "title": "Reservations",
+                "createLabel": "Reservation-ஐ உருவாக்கு",
+                "createOrEditLabel": "Reservation -ஐ மாற்று (அ) உருவாக்கு",
+                "search": "Search for Reservation"
+            },
+            "created": "Reservation புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Reservation மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Reservation நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Reservation {{ id }}?"
+            },
+            "detail": {
+                "title": "Reservation"
+            },
+            "date": "Date",
+            "vehicle": "Vehicle",
+            "seat": "Seat"
+        }
+    }
+}

@@ -2,10 +2,13 @@ package com.csse.ticketsystem.service;
 
 import com.csse.ticketsystem.domain.Authority;
 import com.csse.ticketsystem.domain.User;
+import com.csse.ticketsystem.domain.UserExtra;
 import com.csse.ticketsystem.repository.AuthorityRepository;
 import com.csse.ticketsystem.repository.PersistentTokenRepository;
 import com.csse.ticketsystem.config.Constants;
 import com.csse.ticketsystem.repository.UserRepository;
+import com.csse.ticketsystem.repository.UserExtraRepository;
+import com.csse.ticketsystem.repository.search.UserExtraSearchRepository;
 import com.csse.ticketsystem.repository.search.UserSearchRepository;
 import com.csse.ticketsystem.security.AuthoritiesConstants;
 import com.csse.ticketsystem.security.SecurityUtils;
@@ -39,6 +42,10 @@ public class UserService {
 
     private final UserRepository userRepository;
 
+    private final UserExtraRepository userExtraRepository;
+
+    private final UserExtraSearchRepository userExtraSearchRepository;
+
     private final PasswordEncoder passwordEncoder;
 
     private final SocialService socialService;
@@ -49,13 +56,15 @@ public class UserService {
 
     private final AuthorityRepository authorityRepository;
 
-    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder, SocialService socialService, UserSearchRepository userSearchRepository, PersistentTokenRepository persistentTokenRepository, AuthorityRepository authorityRepository) {
+    public UserService(UserRepository userRepository,UserExtraRepository userExtraRepository,UserExtraSearchRepository userExtraSearchRepository, PasswordEncoder passwordEncoder, SocialService socialService, UserSearchRepository userSearchRepository, PersistentTokenRepository persistentTokenRepository, AuthorityRepository authorityRepository) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
         this.socialService = socialService;
         this.userSearchRepository = userSearchRepository;
         this.persistentTokenRepository = persistentTokenRepository;
         this.authorityRepository = authorityRepository;
+        this.userExtraRepository = userExtraRepository;
+        this.userExtraSearchRepository= userExtraSearchRepository;
     }
 
     public Optional<User> activateRegistration(String key) {
@@ -117,6 +126,16 @@ public class UserService {
         userRepository.save(newUser);
         userSearchRepository.save(newUser);
         log.debug("Created Information for User: {}", newUser);
+
+        // Create and save the UserExtra entity
+        UserExtra newUserExtra = new UserExtra();
+        newUserExtra.setUser(newUser);
+        newUserExtra.setContactNo(userDTO.getContactNo());
+        newUserExtra.setName(userDTO.getName());
+        newUserExtra.setAddress(userDTO.getAddress());
+        userExtraRepository.save(newUserExtra);
+        userExtraSearchRepository.save(newUserExtra);
+        log.debug("Created Information for UserExtra: {}", newUserExtra);
         return newUser;
     }
 

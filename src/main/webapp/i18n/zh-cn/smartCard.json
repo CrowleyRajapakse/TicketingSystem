@@ -1,0 +1,24 @@
+{
+    "ticketingSystemApp": {
+        "smartCard" : {
+            "home": {
+                "title": "Smart Cards",
+                "createLabel": "创建新 Smart Card",
+                "createOrEditLabel": "创建或编辑 Smart Card",
+                "search": "查找 Smart Card"
+            },
+            "created": "Smart Card {{ param }} 创建成功",
+            "updated": "Smart Card {{ param }} 更新成功",
+            "deleted": "Smart Card {{ param }} 删除成功",
+            "delete": {
+                "question": "你确定要删除 Smart Card {{ id }} 吗？"
+            },
+            "detail": {
+                "title": "Smart Card"
+            },
+            "smartCardID": "Smart Card ID",
+            "expiryDate": "Expiry Date",
+            "status": "Status"
+        }
+    }
+}

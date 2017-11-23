@@ -1,0 +1,24 @@
+{
+    "ticketingSystemApp": {
+        "reservation" : {
+            "home": {
+                "title": "Reservations",
+                "createLabel": "नया Reservation बनाएँ",
+                "createOrEditLabel": "Reservation बनाएँ या संपादित करें",
+                "search": "Reservation खोजें"
+            },
+            "created": "एक नया Reservation [identifier: {{ param }}] तैयार है",
+            "updated": "एक Reservation [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Reservation [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Reservation [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Reservation"
+            },
+            "date": "Date",
+            "vehicle": "Vehicle",
+            "seat": "Seat"
+        }
+    }
+}

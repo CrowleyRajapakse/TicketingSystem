@@ -13,6 +13,9 @@
                 "seat": "Seat",
                 "halt": "Halt",
                 "journey": "Journey",
+                "userExtra": "User Extra",
+                "reservation": "Reservation",
+                "smartCard": "Smart Card",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

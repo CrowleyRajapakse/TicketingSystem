@@ -1,0 +1,24 @@
+{
+    "ticketingSystemApp": {
+        "reservation" : {
+            "home": {
+                "title": "Reservations",
+                "createLabel": "创建新 Reservation",
+                "createOrEditLabel": "创建或编辑 Reservation",
+                "search": "查找 Reservation"
+            },
+            "created": "Reservation {{ param }} 创建成功",
+            "updated": "Reservation {{ param }} 更新成功",
+            "deleted": "Reservation {{ param }} 删除成功",
+            "delete": {
+                "question": "你确定要删除 Reservation {{ id }} 吗？"
+            },
+            "detail": {
+                "title": "Reservation"
+            },
+            "date": "Date",
+            "vehicle": "Vehicle",
+            "seat": "Seat"
+        }
+    }
+}

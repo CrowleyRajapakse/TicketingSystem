@@ -50,6 +50,18 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <label class="control-label" for="contactNo" >Contact No</label>
+                    <input class="form-control" id="contactNo" ng-model="vm.registerAccount.contactNo" placeholder="Contact No" />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="name" >Name</label>
+                    <input class="form-control" id="name" ng-model="vm.registerAccount.name" placeholder="Name" />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="address" >Address</label>
+                    <input class="form-control" id="address" ng-model="vm.registerAccount.address" placeholder="Address" />
+                </div>
+                <div class="form-group">
                     <label class="control-label" for="email" data-translate="global.form.email">Email</label>
                     <input type="email" class="form-control" id="email" name="email" placeholder="{{'global.form.email.placeholder' | translate}}"
                            ng-model="vm.registerAccount.email" ng-minlength=5 ng-maxlength=100 required>

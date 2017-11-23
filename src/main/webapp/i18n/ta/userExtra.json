@@ -1,0 +1,25 @@
+{
+    "ticketingSystemApp": {
+        "userExtra" : {
+            "home": {
+                "title": "User Extras",
+                "createLabel": "User Extra-ஐ உருவாக்கு",
+                "createOrEditLabel": "User Extra -ஐ மாற்று (அ) உருவாக்கு",
+                "search": "Search for User Extra"
+            },
+            "created": "User Extra புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "User Extra மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A User Extra நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் User Extra {{ id }}?"
+            },
+            "detail": {
+                "title": "User Extra"
+            },
+            "name": "Name",
+            "contactNo": "Contact No",
+            "address": "Address",
+            "user": "User"
+        }
+    }
+}
