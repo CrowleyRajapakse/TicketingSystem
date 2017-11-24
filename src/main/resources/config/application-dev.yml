@@ -50,16 +50,10 @@ spring:
                     logs: build/elasticsearch/log
                     data: build/elasticsearch/data
     mail:
-        host: smtp.gmail.com
-                port: 587
-                username: csseproj@gmail.com
-                password: csse@#13
-                protocol: smtp
-                tls: true
-                properties.mail.smtp:
-                                        auth: true
-                                        starttls.enable: true
-                                        ssl.trust: smtp.gmail.com
+        host: localhost
+        port: 25
+        username:
+        password:
     messages:
         cache-seconds: 1
     thymeleaf:
