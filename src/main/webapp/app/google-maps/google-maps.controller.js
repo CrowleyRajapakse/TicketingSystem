@@ -96,7 +96,6 @@
         $scope.directions = {
             origin: "Matara, Sri Lanka",
             destination: "Colombo, Sri Lanka",
-            amount: "80",
             showList: false
         };
 
