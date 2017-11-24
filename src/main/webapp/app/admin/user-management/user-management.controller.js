@@ -1,4 +1,4 @@
-(function() {
+(function () {
     'use strict';
 
     angular
@@ -10,7 +10,7 @@
     function UserManagementController(Principal, User, ParseLinks, AlertService, $state, pagingParams, paginationConstants, JhiLanguageService) {
         var vm = this;
 
-        vm.authorities = ['ROLE_USER', 'ROLE_ADMIN','ROLE_PASSENGER'];
+        vm.authorities = ['ROLE_USER', 'ROLE_ADMIN', 'ROLE_PASSENGER', 'ROLE_DRIVER', 'ROLE_INSPECTOR', 'ROLE_MANAGER'];
         vm.currentAccount = null;
         vm.languages = null;
         vm.loadAll = loadAll;
@@ -30,11 +30,11 @@
         JhiLanguageService.getAll().then(function (languages) {
             vm.languages = languages;
         });
-        Principal.identity().then(function(account) {
+        Principal.identity().then(function (account) {
             vm.currentAccount = account;
         });
 
-        function setActive (user, isActivated) {
+        function setActive(user, isActivated) {
             user.activated = isActivated;
             User.update(user, function () {
                 vm.loadAll();
@@ -42,7 +42,7 @@
             });
         }
 
-        function loadAll () {
+        function loadAll() {
             User.query({
                 page: pagingParams.page - 1,
                 size: vm.itemsPerPage,
@@ -62,7 +62,7 @@
             AlertService.error(error.data.message);
         }
 
-        function clear () {
+        function clear() {
             vm.user = {
                 id: null, login: null, firstName: null, lastName: null, email: null,
                 activated: null, langKey: null, createdBy: null, createdDate: null,
@@ -71,7 +71,7 @@
             };
         }
 
-        function sort () {
+        function sort() {
             var result = [vm.predicate + ',' + (vm.reverse ? 'asc' : 'desc')];
             if (vm.predicate !== 'id') {
                 result.push('id');
@@ -79,12 +79,12 @@
             return result;
         }
 
-        function loadPage (page) {
+        function loadPage(page) {
             vm.page = page;
             vm.transition();
         }
 
-        function transition () {
+        function transition() {
             $state.transitionTo($state.$current, {
                 page: vm.page,
                 sort: vm.predicate + ',' + (vm.reverse ? 'asc' : 'desc'),
