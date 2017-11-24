@@ -24,13 +24,10 @@ public class JourneyDTO implements Serializable {
     @NotNull
     private LocalDate departure_time;
 
-    @NotNull
     private String arrival;
 
-    @NotNull
     private LocalDate arrival_time;
 
-    @NotNull
     @DecimalMin(value = "0")
     private Double amount;
 

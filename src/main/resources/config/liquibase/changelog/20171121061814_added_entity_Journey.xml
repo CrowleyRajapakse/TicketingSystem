@@ -35,15 +35,15 @@
             </column>
 
             <column name="arrival" type="varchar(255)">
-                <constraints nullable="false" />
+                <constraints nullable="true" />
             </column>
 
             <column name="arrival_time" type="date">
-                <constraints nullable="false" />
+                <constraints nullable="true" />
             </column>
 
             <column name="amount" type="double">
-                <constraints nullable="false" />
+                <constraints nullable="true" />
             </column>
 
             <column name="vehicle_id" type="bigint">

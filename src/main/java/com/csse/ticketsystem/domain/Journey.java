@@ -34,17 +34,14 @@ public class Journey implements Serializable {
     @Column(name = "departure_time", nullable = false)
     private LocalDate departure_time;
 
-    @NotNull
-    @Column(name = "arrival", nullable = false)
+    @Column(name = "arrival")
     private String arrival;
 
-    @NotNull
-    @Column(name = "arrival_time", nullable = false)
+    @Column(name = "arrival_time")
     private LocalDate arrival_time;
 
-    @NotNull
     @DecimalMin(value = "0")
-    @Column(name = "amount", nullable = false)
+    @Column(name = "amount")
     private Double amount;
 
     @ManyToOne(optional = false)

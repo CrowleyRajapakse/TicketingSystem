@@ -237,63 +237,6 @@ public class JourneyResourceIntTest {
 
     @Test
     @Transactional
-    public void checkArrivalIsRequired() throws Exception {
-        int databaseSizeBeforeTest = journeyRepository.findAll().size();
-        // set the field null
-        journey.setArrival(null);
-
-        // Create the Journey, which fails.
-        JourneyDTO journeyDTO = journeyMapper.toDto(journey);
-
-        restJourneyMockMvc.perform(post("/api/journeys")
-            .contentType(TestUtil.APPLICATION_JSON_UTF8)
-            .content(TestUtil.convertObjectToJsonBytes(journeyDTO)))
-            .andExpect(status().isBadRequest());
-
-        List<Journey> journeyList = journeyRepository.findAll();
-        assertThat(journeyList).hasSize(databaseSizeBeforeTest);
-    }
-
-    @Test
-    @Transactional
-    public void checkArrival_timeIsRequired() throws Exception {
-        int databaseSizeBeforeTest = journeyRepository.findAll().size();
-        // set the field null
-        journey.setArrival_time(null);
-
-        // Create the Journey, which fails.
-        JourneyDTO journeyDTO = journeyMapper.toDto(journey);
-
-        restJourneyMockMvc.perform(post("/api/journeys")
-            .contentType(TestUtil.APPLICATION_JSON_UTF8)
-            .content(TestUtil.convertObjectToJsonBytes(journeyDTO)))
-            .andExpect(status().isBadRequest());
-
-        List<Journey> journeyList = journeyRepository.findAll();
-        assertThat(journeyList).hasSize(databaseSizeBeforeTest);
-    }
-
-    @Test
-    @Transactional
-    public void checkAmountIsRequired() throws Exception {
-        int databaseSizeBeforeTest = journeyRepository.findAll().size();
-        // set the field null
-        journey.setAmount(null);
-
-        // Create the Journey, which fails.
-        JourneyDTO journeyDTO = journeyMapper.toDto(journey);
-
-        restJourneyMockMvc.perform(post("/api/journeys")
-            .contentType(TestUtil.APPLICATION_JSON_UTF8)
-            .content(TestUtil.convertObjectToJsonBytes(journeyDTO)))
-            .andExpect(status().isBadRequest());
-
-        List<Journey> journeyList = journeyRepository.findAll();
-        assertThat(journeyList).hasSize(databaseSizeBeforeTest);
-    }
-
-    @Test
-    @Transactional
     public void getAllJourneys() throws Exception {
         // Initialize the database
         journeyRepository.saveAndFlush(journey);
