@@ -1,16 +1,16 @@
-(function() {
+(function () {
     'use strict';
 
     angular
         .module('ticketingSystemApp')
-        .controller('UserManagementDialogController',UserManagementDialogController);
+        .controller('UserManagementDialogController', UserManagementDialogController);
 
     UserManagementDialogController.$inject = ['$stateParams', '$uibModalInstance', 'entity', 'User', 'JhiLanguageService'];
 
-    function UserManagementDialogController ($stateParams, $uibModalInstance, entity, User, JhiLanguageService) {
+    function UserManagementDialogController($stateParams, $uibModalInstance, entity, User, JhiLanguageService) {
         var vm = this;
 
-        vm.authorities = ['ROLE_USER', 'ROLE_ADMIN'];
+        vm.authorities = ['ROLE_USER', 'ROLE_ADMIN', 'ROLE_PASSENGER'];
         vm.clear = clear;
         vm.languages = null;
         vm.save = save;
@@ -21,20 +21,20 @@
             vm.languages = languages;
         });
 
-        function clear () {
+        function clear() {
             $uibModalInstance.dismiss('cancel');
         }
 
-        function onSaveSuccess (result) {
+        function onSaveSuccess(result) {
             vm.isSaving = false;
             $uibModalInstance.close(result);
         }
 
-        function onSaveError () {
+        function onSaveError() {
             vm.isSaving = false;
         }
 
-        function save () {
+        function save() {
             vm.isSaving = true;
             if (vm.user.id !== null) {
                 User.update(vm.user, onSaveSuccess, onSaveError);
