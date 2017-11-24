@@ -11,6 +11,12 @@ public final class AuthoritiesConstants {
 
     public static final String PASSENGER = "ROLE_PASSENGER";
 
+    public static final String DRIVER = "ROLE_DRIVER";
+
+    public static final String INSPECTOR = "ROLE_INSPECTOR";
+
+    public static final String MANAGER = "ROLE_MANAGER";
+
     public static final String ANONYMOUS = "ROLE_ANONYMOUS";
 
     private AuthoritiesConstants() {
