@@ -14,6 +14,7 @@
     <include file="config/liquibase/changelog/20171123115725_added_entity_UserExtra.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20171123121149_added_entity_Reservation.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20171123121637_added_entity_SmartCard.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171124082344_added_entity_Balance.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="config/liquibase/changelog/20171121031932_added_entity_constraints_Driver.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20171121033458_added_entity_constraints_Route.xml" relativeToChangelogFile="false"/>
@@ -23,5 +24,6 @@
     <include file="config/liquibase/changelog/20171123115725_added_entity_constraints_UserExtra.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20171123121149_added_entity_constraints_Reservation.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20171123121637_added_entity_constraints_SmartCard.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171124082344_added_entity_constraints_Balance.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

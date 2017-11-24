@@ -1,0 +1,27 @@
+{
+    "ticketingSystemApp": {
+        "balance" : {
+            "home": {
+                "title": "Balances",
+                "createLabel": "Create a new Balance",
+                "createOrEditLabel": "Create or edit a Balance",
+                "search": "Search for Balance"
+            },
+            "created": "A new Balance is created with identifier {{ param }}",
+            "updated": "A Balance is updated with identifier {{ param }}",
+            "deleted": "A Balance is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Balance {{ id }}?"
+            },
+            "detail": {
+                "title": "Balance"
+            },
+            "currentAmount": "Current Amount",
+            "reloadAmount": "Reload Amount",
+            "paymentMethod": "Payment Method",
+            "total": "Total",
+            "time": "Time",
+            "smartCardID": "Smart Card ID"
+        }
+    }
+}

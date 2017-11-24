@@ -16,6 +16,7 @@
                 "userExtra": "User Extra",
                 "reservation": "Reservation",
                 "smartCard": "Smart Card",
+                "balance": "Balance",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

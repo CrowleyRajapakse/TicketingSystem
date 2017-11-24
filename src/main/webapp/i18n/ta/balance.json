@@ -1,0 +1,27 @@
+{
+    "ticketingSystemApp": {
+        "balance" : {
+            "home": {
+                "title": "Balances",
+                "createLabel": "Balance-ஐ உருவாக்கு",
+                "createOrEditLabel": "Balance -ஐ மாற்று (அ) உருவாக்கு",
+                "search": "Search for Balance"
+            },
+            "created": "Balance புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Balance மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Balance நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Balance {{ id }}?"
+            },
+            "detail": {
+                "title": "Balance"
+            },
+            "currentAmount": "Current Amount",
+            "reloadAmount": "Reload Amount",
+            "paymentMethod": "Payment Method",
+            "total": "Total",
+            "time": "Time",
+            "smartCardID": "Smart Card ID"
+        }
+    }
+}

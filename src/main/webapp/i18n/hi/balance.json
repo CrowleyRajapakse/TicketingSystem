@@ -1,0 +1,27 @@
+{
+    "ticketingSystemApp": {
+        "balance" : {
+            "home": {
+                "title": "Balances",
+                "createLabel": "नया Balance बनाएँ",
+                "createOrEditLabel": "Balance बनाएँ या संपादित करें",
+                "search": "Balance खोजें"
+            },
+            "created": "एक नया Balance [identifier: {{ param }}] तैयार है",
+            "updated": "एक Balance [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Balance [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Balance [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Balance"
+            },
+            "currentAmount": "Current Amount",
+            "reloadAmount": "Reload Amount",
+            "paymentMethod": "Payment Method",
+            "total": "Total",
+            "time": "Time",
+            "smartCardID": "Smart Card ID"
+        }
+    }
+}
