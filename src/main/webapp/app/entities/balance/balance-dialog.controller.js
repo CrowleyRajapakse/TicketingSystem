@@ -57,5 +57,6 @@
         function openCalendar (date) {
             vm.datePickerOpenStatus[date] = true;
         }
+        $scope.method=['Card','Cash'];
     }
 })();
