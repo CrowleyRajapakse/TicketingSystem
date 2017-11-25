@@ -43,7 +43,7 @@
         </div>
         <div class="form-group">
             <label class="control-label" data-translate="ticketingSystemApp.smartCard.status" for="field_status">Status</label>
-            <input type="text" class="form-control" name="status" id="field_status"
+            <select ng-options="option for option in options" class="form-control" name="status" id="field_status"
                     ng-model="vm.smartCard.status"
                     required/>
             <div ng-show="editForm.status.$invalid">
