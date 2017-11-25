@@ -48,5 +48,6 @@
         function openCalendar (date) {
             vm.datePickerOpenStatus[date] = true;
         }
+        $scope.options = ['Activated','Not Activated','Rejected'];
     }
 })();
