@@ -146,4 +146,19 @@ public class BalanceResource {
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
 
+    /**
+     * reload balance
+     * @param currentAmount
+     * @param reloadAmount
+     * @return
+     */
+    @GetMapping("/balances/reload/{current_amount}/{reload_amount}")
+    @Timed
+    public double getTotal(@PathVariable double currentAmount, @PathVariable double reloadAmount){
+
+        log.debug("reload balance");
+        double total = balanceService.reload(currentAmount, reloadAmount);
+        return total;
+    }
+
 }

@@ -107,4 +107,11 @@ public class BalanceServiceImpl implements BalanceService{
         Page<Balance> result = balanceSearchRepository.search(queryStringQuery(query), pageable);
         return result.map(balanceMapper::toDto);
     }
+
+    @Override
+    @Transactional(readOnly = true)
+    public double reload(double currentAmount, double reloadAmount){
+        log.debug("reload balance");
+        return currentAmount+reloadAmount;
+    }
 }
